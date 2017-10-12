@@ -23,7 +23,7 @@ router
         return next(err)
       }
       if (!user) {
-        return res.redirect('/people/login')
+        return res.redirect('/user/login')
       }
       req.logIn(user, (err, obj) => {
         if (err) {

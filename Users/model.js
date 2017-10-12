@@ -25,7 +25,7 @@ bcrypt.genSalt(10,function (err,salt) {
     next()
   })
 })
-})
+
 UserSchema.methods.comparePassword = function (pwd, dbPass, done) {
   bcrypt.compare(pwd,dbPass, (err, isMatch) => {
     done(err, isMatch)
@@ -36,4 +36,4 @@ UserSchema.statics.findByEmail = function (email, cb) {
 }
 const Person = mongoose.model('User', UserSchema)
 
-module.exports = User
+module.exports = Person

@@ -2,11 +2,11 @@ const express = require('express');
 // const path = require('path');
 const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser');
-const { peopleRoutes, passportConfig} =require('./people')
+// const { peopleRoutes, passportConfig} =require('./people')
 const dal = require('./dal');
 const session = require('express-session')
 const app = express();
-const Person = require('./people/model')
+const Person = require('./Users/model')
 const passport = require('passport')
 const MongoStore = require('connect-mongo') (session)
 
@@ -33,7 +33,7 @@ app.use(express.static('Public'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/people' , peopleRoutes)
+// app.use('/people' , peopleRoutes)
 
 
 
