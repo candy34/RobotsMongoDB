@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  {{>Header}}
+  <body>
+    <h1>Robots for Hire</h1>
+      <div class="row">
+        {{#users}}
+        <div class="robot">
+         <img class="pic" src={{avatar}} alt="{{name}}"/>
+        <a href={{id}}>{{name}}</a>
+       <p>{{job}} - {{company}}</p>
+
+       </div>
+        {{/users}}
+         {{^users}}
+         <h1>NoRobo<h1>
+       {{/users}}
+
+    </div>
+  </div>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+  <body>
+    <h1>Is this working?</h1>
+  </body>
+</html> -->
