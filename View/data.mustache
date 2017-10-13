@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  {{>_head}}
+  <body>
+    <h1>Robots for Hire</h1>
+      <div>
+        {{#data}}
+          {{>_user}}
+        {{/data}}
+        {{^data}}
+         <h1>NoRobo<h1>
+        {{/data}}
+      </div>
+  </body>
+</html>

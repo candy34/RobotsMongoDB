@@ -1,19 +1,19 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     background-color: lightgray;
-}  
+}
  .row {
         /* display: table;
         width: 100%;
-        table-layout: fixed; 
+        table-layout: fixed;
         border-spacing: 10px;  */
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
         flex-basis: 100%;
-         
+
  }
   .robot{
       flex-basis: 30%;
@@ -24,7 +24,7 @@ body {
   }
   .pic {
     width: 100px;
-    
+
   }
   /* .users {
     display: flex;

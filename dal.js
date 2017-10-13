@@ -1,21 +1,23 @@
 const mongoose = require('mongoose');
-const User = require('./Users/model')
+const Robot = require('./model')
 //const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017/RobotsMongoDB'
+
 mongoose.Promise = require('bluebird')
-mongoose.connect( url ,{
-  useMongoClient:true
+const url = 'mongodb://localhost:27017/RobotsMongoDB'
+
+mongoose.connect(url ,{
+  useMongoClient: true
 })
 
-let users = [];
+// let users = [];
 
-function getAllUsers () {
-  return User.find()
+function getAllRobots () {
+  return Robot.find()
 }
 
   // Create a collection we want to drop later
   // let collection = db.collection('users');
-  let documents = []
+  // let documents = []
   // Insert a bunch of documents for the testing
 
     // Perform a simple find and return all the documents
@@ -48,9 +50,9 @@ function getAllUsers () {
 
 
 
-function getUser (userId) {
-  return Person.find({_id: userId}).catch(function (err) {
-    console.log(err)
+function getRobotById (robotId) {
+  return Robot.find({'id': robotId}).catch(function (err) {
+    console.log('error', err)
   })
 }
     // let chosenUser = {}
@@ -85,12 +87,14 @@ function deleteUser (userId) {
 
 
 module.exports = {
-    getAllUsers: getAllUsers,
+    // getAllRobots: getAllRobots,
     // getUsers: getUsers,
-    getUser: getUser,
-   getUserByUsername:getUserByUsername,
-   getUserByEmail:getUserByEmail,
-    addUser: addUser,
-    deleteUser: deleteUser,
+  //   getUser: getUser,
+  //  getUserByUsername:getUserByUsername,
+  //  getUserByEmail:getUserByEmail,
+  //   addUser: addUser,
+  //   deleteUser: deleteUser,
+  getAllRobots,
+  getRobotById
 
 }
